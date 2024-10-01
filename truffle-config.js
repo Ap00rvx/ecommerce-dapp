@@ -1,19 +1,19 @@
 module.exports = {
   networks: {
     development: {
-      host: "localhost",
-      port: 8545,
-      network_id: "*", // Match any network id
-      gas: 5000000
+      host: "127.0.0.1",   // Localhost (default: none)
+      port: 7545,          // Standard Ganache port (default: none)
+      network_id: "*",     // Any network (default: none)
     }
   },
   compilers: {
     solc: {
+      version: "0.8.13",   // Specify the compiler version
       settings: {
         optimizer: {
-          enabled: true, // Default: false
-          runs: 200      // Default: 200
-        },
+          enabled: true,
+          runs: 200
+        }
       }
     }
   }
